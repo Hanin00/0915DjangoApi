@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 class Lift(models.Model):
     lift_id = models.AutoField(primary_key=True)
     lift_name = models.CharField(max_length=45)
@@ -11,7 +10,9 @@ class Lift(models.Model):
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
 
-
+    class Meta:
+        managed = False
+        db_table = 'lift'
 
 
 class Liftcheck(models.Model):
@@ -23,6 +24,10 @@ class Liftcheck(models.Model):
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
 
+    class Meta:
+        managed = False
+        db_table = 'liftcheck'
+
 
 
 
@@ -33,3 +38,8 @@ class Checker(models.Model):
     charge_city = models.CharField(max_length=45, blank=True, null=True)
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'checker'
+

@@ -76,8 +76,18 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # django db를 mysql로 사용하겠음
+        'ENGINE': 'django.db.backends.mysql',
+        # DB 이름 지어주기
+        'NAME': 'LiftDB0915',
+        # 사용자 유저 계정 생성 후 입력하기
+        'USER': 'hanin',
+        # 사용자 비밀번호 생성 후 입력하기
+        'PASSWORD': '1234',
+        # default host인 localhost
+        'HOST': 'localhost',
+        # MySQL default 포트 번호
+        'PORT': '3306',
     }
 }
 
