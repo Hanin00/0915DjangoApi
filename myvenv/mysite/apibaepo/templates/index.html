@@ -1,0 +1,21 @@
+<table class="table-contents" style="padding:10px">
+    <tr>
+        <th> 이름</th>
+        <th></th>
+        <th> 주소</th>
+        <th></th>
+        <th> 상태</th>
+    </tr>
+    {% for lift in lifts.all%}
+    <tr>
+        <td> {{lift.lift_name}}</td>
+        <td></td>
+        <td> {{lift.address}}</td>
+        <td></td>
+        <td> {{lift.lift_status}}</td>
+    </tr>
+    {%endfor%}
+</table>
+
+
+
